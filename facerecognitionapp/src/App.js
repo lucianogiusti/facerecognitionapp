@@ -85,7 +85,7 @@ onButtonSubmit = () => {
     .then(response => response.json())
     .then(response => { 
       if (response) {
-        fetch('https://cryptic-shelf-07962.herokuapp.com:3000/image', {
+        fetch('https://cryptic-shelf-07962.herokuapp.com/image', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({

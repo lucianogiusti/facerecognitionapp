@@ -75,7 +75,7 @@ onInputChange = (event) => {
 
 onButtonSubmit = () => {
   this.setState({imageUrl: this.state.input});
-    fetch('http://localhost:3000/imageUrl', {
+    fetch('https://cryptic-shelf-07962.herokuapp.com/imageUrl', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -85,7 +85,7 @@ onButtonSubmit = () => {
     .then(response => response.json())
     .then(response => { 
       if (response) {
-        fetch('http://localhost:3000/image', {
+        fetch('https://cryptic-shelf-07962.herokuapp.com:3000/image', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
